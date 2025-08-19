@@ -15,13 +15,13 @@ export default function ResumePage() {
     
     const [resumeData, setResumeData] = useState({
         personalInfo: {
-            name: 'Taufiq Imroze',
+            name: 'Toufiq Imroze',
             title: 'Textile Engineering Student',
-            email: 'taufiq.imroze@email.com',
+            email: 'Toufiq.imroze@email.com',
             phone: '+880 1X-XXXX-XXXX',
             location: 'Dhaka, Bangladesh',
-            linkedin: 'linkedin.com/in/taufiq-imroze',
-            website: 'taufiq-imroze-portfolio.vercel.app',
+            linkedin: 'linkedin.com/in/Toufiq-imroze',
+            website: 'Toufiq-imroze-portfolio.vercel.app',
             includePhoto: false
         },
         summary: 'Passionate textile engineering student with a deep interest in sustainable apparel manufacturing and innovative textile technologies. Currently pursuing graduation at NITER with hands-on experience in textile production, quality control, and modern manufacturing processes.',

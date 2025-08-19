@@ -120,18 +120,18 @@ const Skills = () => {
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
         >
-          <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-slate-800 via-blue-700 to-indigo-700 bg-clip-text text-transparent mb-4">
+          <motion.div variants={itemVariants} className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-slate-800 via-blue-700 to-indigo-700 bg-clip-text text-transparent mb-4 px-4 sm:px-0">
               Skills & Expertise
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 mx-auto mb-6"></div>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
               Technical expertise developed through academic excellence and hands-on experience.
             </p>
           </motion.div>
 
           {/* Main Skills Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 mb-12 sm:mb-16">
             {skillCategories.map((category, index) => {
               const IconComponent = category.icon
               return (
@@ -178,26 +178,26 @@ const Skills = () => {
           </div>
 
           {/* Additional Skills */}
-          <motion.div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <motion.div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
             {additionalSkills.map((skillSet, index) => {
               const IconComponent = skillSet.icon
               return (
                 <motion.div
                   key={index}
                   whileHover={{ y: -5 }}
-                  className="text-center p-6 bg-neutral-50 rounded-xl hover:shadow-lg transition-all duration-300"
+                  className="text-center p-4 sm:p-6 bg-neutral-50 rounded-xl hover:shadow-lg transition-all duration-300"
                 >
                   <div className="w-12 h-12 flex items-center justify-center mx-auto mb-4">
                     <IconComponent className="w-8 h-8 text-blue-500 stroke-1" />
                   </div>
-                  <h4 className="font-bold text-neutral-900 mb-4">
+                  <h4 className="font-bold text-neutral-900 mb-4 text-base sm:text-lg">
                     {skillSet.category}
                   </h4>
                   <div className="space-y-2">
                     {skillSet.items.map((item, itemIndex) => (
                       <div
                         key={itemIndex}
-                        className="px-3 py-1 bg-white rounded-full text-sm text-neutral-600 border border-neutral-200"
+                        className="px-3 py-1 bg-white rounded-full text-xs sm:text-sm text-neutral-600 border border-neutral-200"
                       >
                         {item}
                       </div>

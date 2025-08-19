@@ -50,24 +50,24 @@ const Hero = () => {
           {/* Main heading with gradient text */}
           <motion.h1
             variants={itemVariants}
-            className="text-5xl md:text-7xl font-bold mb-6 leading-tight font-['Inter']"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-tight font-['Inter']"
           >
             <span className="bg-gradient-to-r from-slate-800 via-blue-700 to-indigo-700 bg-clip-text text-transparent">
-              Taufiq Imroze
+              Toufiq Imroze
             </span>
           </motion.h1>
 
           {/* Subtitle with textile focus */}
           <motion.h2
             variants={itemVariants}
-            className="text-xl md:text-2xl font-medium text-slate-700 mb-8 leading-relaxed"
+            className="text-lg sm:text-xl md:text-2xl font-medium text-slate-700 mb-6 sm:mb-8 leading-relaxed px-4 sm:px-0"
           >
             Textile Engineering Student at{' '}
             <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent font-semibold">
               NITER
             </span>
-            <br />
-            <span className="text-lg text-slate-600 font-normal">
+            <br className="hidden sm:block" />
+            <span className="block sm:inline text-base sm:text-lg text-slate-600 font-normal mt-1 sm:mt-0">
               Transforming Textiles Through Innovation
             </span>
           </motion.h2>
@@ -75,7 +75,7 @@ const Hero = () => {
           {/* Brief description - shortened and more selective */}
           <motion.p
             variants={itemVariants}
-            className="text-lg text-slate-600 mb-12 max-w-2xl mx-auto leading-relaxed"
+            className="text-base sm:text-lg text-slate-600 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed px-4 sm:px-0"
           >
             Passionate about sustainable textile manufacturing and innovative fabric technologies.
           </motion.p>
@@ -83,22 +83,22 @@ const Hero = () => {
           {/* CTA Buttons */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
+            className="flex flex-col sm:flex-row gap-4 justify-center mb-12 sm:mb-16 px-4 sm:px-0"
           >
             <motion.a
               href="#contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium rounded-xl hover:from-blue-700 hover:to-indigo-700 transition-all shadow-lg hover:shadow-xl"
+              className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium rounded-xl hover:from-blue-700 hover:to-indigo-700 transition-all shadow-lg hover:shadow-xl text-center"
             >
-              <Mail size={20} />
+              <Mail size={18} className="sm:w-5 sm:h-5" />
               Get In Touch
             </motion.a>
             <motion.a
               href="#projects"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center gap-2 px-8 py-4 bg-white/80 backdrop-blur-sm text-slate-700 font-medium rounded-xl border border-slate-200 hover:bg-white hover:shadow-lg transition-all"
+              className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-white/80 backdrop-blur-sm text-slate-700 font-medium rounded-xl border border-slate-200 hover:bg-white hover:shadow-lg transition-all text-center"
             >
               View Projects
             </motion.a>

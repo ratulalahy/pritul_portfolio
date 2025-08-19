@@ -97,12 +97,12 @@ const Education = () => {
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
         >
-          <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-neutral-900 mb-4">
+          <motion.div variants={itemVariants} className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900 mb-4 px-4 sm:px-0">
               Education & Qualifications
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto mb-6"></div>
-            <p className="text-lg text-neutral-600 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-neutral-600 max-w-3xl mx-auto px-4 sm:px-0">
               My academic journey in textile engineering and continuous learning through certifications.
             </p>
           </motion.div>

@@ -158,18 +158,18 @@ const Projects = () => {
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
         >
-          <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-neutral-900 mb-4">
+          <motion.div variants={itemVariants} className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900 mb-4 px-4 sm:px-0">
               Projects & Research
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto mb-6"></div>
-            <p className="text-lg text-neutral-600 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-neutral-600 max-w-3xl mx-auto px-4 sm:px-0">
               Academic projects, research work, and practical implementations showcasing my expertise in textile engineering and sustainable manufacturing.
             </p>
           </motion.div>
 
           {/* Projects Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {projects.map((project, index) => {
               const IconComponent = project.icon
               return (

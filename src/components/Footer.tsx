@@ -48,7 +48,7 @@ const Footer = () => {
                     {/* Brand Section */}
                     <div className="space-y-4">
                         <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                            Taufiq Imroze
+                            Toufiq Imroze
                         </h3>
                         <p className="text-slate-500 leading-relaxed">
                             Textile Engineering student passionate about sustainable manufacturing
@@ -126,7 +126,7 @@ const Footer = () => {
                 {/* Bottom Footer */}
                 <div className="py-6 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                     <div className="flex items-center space-x-2 text-slate-500 text-sm">
-                        <span>© {currentYear} Taufiq Alahy. Made with</span>
+                        <span>© {currentYear} Toufiq Alahy. Made with</span>
                         <Heart className="w-4 h-4 text-red-500 animate-pulse" />
                         <span>and Next.js</span>
                     </div>

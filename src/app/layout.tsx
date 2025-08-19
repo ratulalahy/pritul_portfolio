@@ -5,21 +5,22 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Taufiq Imroze - Textile Engineer & Apparel Manufacturing Specialist',
-  description: 'Portfolio and resume of Taufiq Imroze, passionate about textile engineering and sustainable apparel manufacturing. Currently pursuing graduation in Textile Engineering at NITER.',
+  title: 'Toufiq Imroze - Textile Engineer & Apparel Manufacturing Specialist',
+  description: 'Portfolio and resume of Toufiq Imroze, passionate about textile engineering and sustainable apparel manufacturing. Currently pursuing graduation in Textile Engineering at NITER.',
   keywords: ['textile engineering', 'apparel manufacturing', 'sustainable textiles', 'NITER'],
-  authors: [{ name: 'Taufiq Imroze' }],
-  creator: 'Taufiq Imroze',
+  authors: [{ name: 'Toufiq Imroze' }],
+  creator: 'Toufiq Imroze',
+  viewport: 'width=device-width, initial-scale=1',
   openGraph: {
-    title: 'Taufiq Imroze - Textile Engineer',
+    title: 'Toufiq Imroze - Textile Engineer',
     description: 'Portfolio showcasing expertise in textile engineering and sustainable apparel manufacturing.',
     type: 'website',
     locale: 'en_US',
-    url: 'https://taufiq-imroze-portfolio.vercel.app',
+    url: 'https://Toufiq-imroze-portfolio.vercel.app',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Taufiq Imroze - Textile Engineer',
+    title: 'Toufiq Imroze - Textile Engineer',
     description: 'Portfolio showcasing expertise in textile engineering and sustainable apparel manufacturing.',
   },
 }

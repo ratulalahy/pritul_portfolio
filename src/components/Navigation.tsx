@@ -61,7 +61,7 @@ const Navigation = () => {
               whileHover={{ scale: 1.05 }}
               className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent"
             >
-              Taufiq Imroze
+              Toufiq Imroze
             </motion.div>
           </Link>
 
@@ -99,7 +99,8 @@ const Navigation = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors text-slate-700"
+            className="md:hidden p-3 rounded-lg hover:bg-slate-100 transition-colors text-slate-700 touch-manipulation"
+            aria-label="Toggle mobile menu"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -111,12 +112,12 @@ const Navigation = () => {
           animate={{ height: isOpen ? 'auto' : 0 }}
           className="md:hidden overflow-hidden"
         >
-          <div className="py-4 space-y-4 bg-white/90 backdrop-blur-md rounded-lg mt-2 border border-slate-200/50">
+          <div className="py-4 space-y-2 bg-white/95 backdrop-blur-md rounded-lg mt-2 border border-slate-200/50 shadow-lg">
             {navItems.map((item) => (
               <button
                 key={item.name}
                 onClick={() => handleNavClick(item.href)}
-                className="block w-full text-left px-4 py-2 text-slate-700 hover:text-blue-600 hover:bg-slate-50 transition-colors duration-300 font-medium rounded-md"
+                className="mobile-nav-item"
               >
                 {item.name}
               </button>
@@ -129,13 +130,13 @@ const Navigation = () => {
             >
               Resume
             </Link> */}
-            <div className="px-4">
+            <div className="px-4 pt-2">
               <button
                 onClick={() => {
                   handleDownloadResume()
                   setIsOpen(false)
                 }}
-                className="inline-flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-all shadow-md w-full justify-center"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-all shadow-md w-full justify-center touch-manipulation"
               >
                 <Download size={18} />
                 <span>Download CV</span>

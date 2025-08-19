@@ -64,24 +64,24 @@ const About = () => {
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
         >
-          <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-slate-800 via-blue-700 to-indigo-700 bg-clip-text text-transparent mb-4">
+          <motion.div variants={itemVariants} className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-slate-800 via-blue-700 to-indigo-700 bg-clip-text text-transparent mb-4 px-4 sm:px-0">
               About Me
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 mx-auto mb-6"></div>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
               Dedicated textile engineering student passionate about sustainable manufacturing and innovation.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Content */}
-            <motion.div variants={itemVariants} className="space-y-6">
-              <h3 className="text-2xl font-semibold text-slate-800 mb-4">
+            <motion.div variants={itemVariants} className="space-y-6 px-4 sm:px-0">
+              <h3 className="text-xl sm:text-2xl font-semibold text-slate-800 mb-4">
                 My Textile Engineering Journey
               </h3>
               
-              <p className="text-slate-600 leading-relaxed text-lg">
+              <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
                 Currently pursuing my Bachelor&apos;s degree in Textile Engineering at NITER, 
                 I am fascinated by the fusion of traditional craftsmanship and cutting-edge technology.
               </p>
