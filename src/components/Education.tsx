@@ -37,11 +37,10 @@ const Education = () => {
       degree: "Bachelor of Science in Textile Engineering",
       institution: "National Institute of Textile Engineering and Research (NITER)",
       location: "Savar, Dhaka, Bangladesh",
-      period: "2020 - 2024 (Expected)",
+      period: "2021 - 2025 (Expected)",
       gpa: "3.XX/4.00",
       description: "Specializing in apparel manufacturing technology with focus on sustainable textile production and quality control systems.",
       achievements: [
-        "Dean's List for academic excellence",
         "Research project on sustainable fabric development",
         "Active member of Textile Engineering Society"
       ],
@@ -56,13 +55,12 @@ const Education = () => {
     },
     {
       degree: "Higher Secondary Certificate (HSC)",
-      institution: "Dhaka College",
+      institution: "Shishukunja School and College",
       location: "Dhaka, Bangladesh",
       period: "2018 - 2020",
-      gpa: "5.00/5.00",
+      gpa: "4.75/5.00",
       description: "Science background with focus on Mathematics, Physics, and Chemistry.",
       achievements: [
-        "Golden GPA 5.00",
         "Merit scholarship recipient",
         "Science club active member"
       ]
@@ -73,19 +71,19 @@ const Education = () => {
     {
       title: "Textile Testing and Quality Control",
       issuer: "NITER Certification Program",
-      date: "2023",
+      date: "2024",
       icon: Award
     },
     {
       title: "Sustainable Manufacturing Practices",
       issuer: "Online Certification",
-      date: "2023",
+      date: "2025",
       icon: BookOpen
     },
     {
       title: "Industrial Safety in Manufacturing",
       issuer: "OSHA Bangladesh",
-      date: "2022",
+      date: "2025",
       icon: Award
     }
   ]
@@ -121,8 +119,8 @@ const Education = () => {
                   <div className="flex flex-col lg:flex-row lg:items-start gap-6">
                     {/* Icon */}
                     <div className="flex-shrink-0">
-                      <div className="w-16 h-16 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-xl flex items-center justify-center">
-                        <GraduationCap className="w-8 h-8 text-white" />
+                      <div className="w-16 h-16 flex items-center justify-center">
+                        <GraduationCap className="w-12 h-12 text-blue-500 stroke-1" />
                       </div>
                     </div>
 
@@ -161,7 +159,7 @@ const Education = () => {
                       </p>
 
                       {/* Achievements */}
-                      {edu.achievements && (
+                      {/* {edu.achievements && (
                         <div className="mb-6">
                           <h4 className="font-semibold text-neutral-900 mb-3">Key Achievements:</h4>
                           <ul className="space-y-2">
@@ -173,7 +171,7 @@ const Education = () => {
                             ))}
                           </ul>
                         </div>
-                      )}
+                      )} */}
 
                       {/* Relevant Courses */}
                       {edu.relevantCourses && (
@@ -212,8 +210,8 @@ const Education = () => {
                     whileHover={{ y: -5 }}
                     className="glass-card rounded-xl p-6 text-center hover:shadow-xl transition-all duration-300"
                   >
-                    <div className="w-12 h-12 bg-gradient-to-r from-accent-500 to-primary-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <IconComponent className="w-6 h-6 text-white" />
+                    <div className="w-12 h-12 flex items-center justify-center mx-auto mb-4">
+                      <IconComponent className="w-8 h-8 text-blue-500 stroke-1" />
                     </div>
                     <h4 className="font-semibold text-neutral-900 mb-2">
                       {cert.title}

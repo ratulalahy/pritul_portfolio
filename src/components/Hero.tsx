@@ -2,174 +2,148 @@
 
 import { motion } from 'framer-motion'
 import { ChevronDown, Mail, Github, Linkedin, MapPin } from 'lucide-react'
-import Image from 'next/image'
 
 const Hero = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.2
-      }
+    // Container animation variants
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                delayChildren: 0.3,
+                staggerChildren: 0.2
+            }
+        }
     }
-  }
 
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5
-      }
+    // Text and item animation variants
+    const itemVariants = {
+        hidden: { y: 30, opacity: 0 },
+        visible: {
+            y: 0,
+            opacity: 1,
+            transition: {
+                duration: 0.8,
+                ease: "easeOut"
+            }
+        }
     }
-  }
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative bg-gradient-to-br from-neutral-50 to-neutral-100 pt-16">
-      <div className="container-width section-padding">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-transparent">
+      {/* Main content */}
+      <div className="container-width section-padding relative z-10">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+          className="text-center max-w-4xl mx-auto"
         >
-          {/* Content */}
-          <div className="space-y-8">
-            <motion.div variants={itemVariants} className="space-y-4">
-              <motion.p 
-                className="text-primary-600 font-semibold text-lg"
-                variants={itemVariants}
-              >
-                Hello, I'm
-              </motion.p>
-              <motion.h1 
-                className="text-5xl lg:text-6xl font-bold text-neutral-900"
-                variants={itemVariants}
-              >
-                Toufiq Imroze
-              </motion.h1>
-              <motion.h2 
-                className="text-2xl lg:text-3xl font-semibold gradient-text"
-                variants={itemVariants}
-              >
-                Textile Engineer & Apparel Manufacturing Specialist
-              </motion.h2>
-            </motion.div>
+          {/* Greeting */}
+          <motion.div variants={itemVariants} className="mb-6">
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/70 backdrop-blur-sm rounded-full border border-blue-100 text-sm font-medium text-slate-600">
+              <MapPin size={16} className="text-blue-500" />
+              Dhaka, Bangladesh
+            </span>
+          </motion.div>
 
-            <motion.p 
-              variants={itemVariants}
-              className="text-lg text-neutral-600 leading-relaxed"
-            >
-              Passionate about sustainable textile engineering and innovative apparel manufacturing. 
-              Currently pursuing my degree in Textile Engineering at NITER, with a focus on 
-              creating eco-friendly solutions for the fashion industry.
-            </motion.p>
+          {/* Main heading with gradient text */}
+          <motion.h1
+            variants={itemVariants}
+            className="text-5xl md:text-7xl font-bold mb-6 leading-tight font-['Inter']"
+          >
+            <span className="bg-gradient-to-r from-slate-800 via-blue-700 to-indigo-700 bg-clip-text text-transparent">
+              Taufiq Imroze
+            </span>
+          </motion.h1>
 
-            <motion.div 
-              variants={itemVariants}
-              className="flex items-center space-x-4 text-neutral-600"
-            >
-              <MapPin size={18} />
-              <span>Dhaka, Bangladesh</span>
-              <span>•</span>
-              <span>NITER Student</span>
-            </motion.div>
+          {/* Subtitle with textile focus */}
+          <motion.h2
+            variants={itemVariants}
+            className="text-xl md:text-2xl font-medium text-slate-700 mb-8 leading-relaxed"
+          >
+            Textile Engineering Student at{' '}
+            <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent font-semibold">
+              NITER
+            </span>
+            <br />
+            <span className="text-lg text-slate-600 font-normal">
+              Transforming Textiles Through Innovation
+            </span>
+          </motion.h2>
 
-            <motion.div 
-              variants={itemVariants}
-              className="flex flex-wrap gap-4"
-            >
-              <motion.a
-                href="#contact"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="btn-primary flex items-center space-x-2"
-              >
-                <Mail size={18} />
-                <span>Get in Touch</span>
-              </motion.a>
-              <motion.a
-                href="/resume"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="btn-secondary"
-              >
-                View Resume
-              </motion.a>
-            </motion.div>
+          {/* Brief description - shortened and more selective */}
+          <motion.p
+            variants={itemVariants}
+            className="text-lg text-slate-600 mb-12 max-w-2xl mx-auto leading-relaxed"
+          >
+            Passionate about sustainable textile manufacturing and innovative fabric technologies.
+          </motion.p>
 
-            <motion.div 
-              variants={itemVariants}
-              className="flex space-x-6"
-            >
-              <motion.a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.1, y: -2 }}
-                className="text-neutral-600 hover:text-primary-600 transition-colors"
-              >
-                <Github size={24} />
-              </motion.a>
-              <motion.a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.1, y: -2 }}
-                className="text-neutral-600 hover:text-primary-600 transition-colors"
-              >
-                <Linkedin size={24} />
-              </motion.a>
-            </motion.div>
-          </div>
-
-          {/* Image */}
+          {/* CTA Buttons */}
           <motion.div
             variants={itemVariants}
-            className="relative flex justify-center lg:justify-end"
+            className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
           >
-            <div className="relative w-80 h-80 lg:w-96 lg:h-96">
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="absolute inset-0 rounded-full bg-gradient-to-r from-primary-500/20 to-secondary-500/20"
-              />
-              <motion.div
-                animate={{ rotate: -360 }}
-                transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-                className="absolute inset-4 rounded-full bg-gradient-to-r from-accent-500/20 to-primary-500/20"
-              />
-              <div className="absolute inset-8 rounded-full overflow-hidden shadow-2xl">
-                <Image
-                  src="/images/profile-placeholder.jpg"
-                  alt="Toufiq Imroze"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
-            </div>
+            <motion.a
+              href="#contact"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium rounded-xl hover:from-blue-700 hover:to-indigo-700 transition-all shadow-lg hover:shadow-xl"
+            >
+              <Mail size={20} />
+              Get In Touch
+            </motion.a>
+            <motion.a
+              href="#projects"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center gap-2 px-8 py-4 bg-white/80 backdrop-blur-sm text-slate-700 font-medium rounded-xl border border-slate-200 hover:bg-white hover:shadow-lg transition-all"
+            >
+              View Projects
+            </motion.a>
+          </motion.div>
+
+          {/* Social Links - clean design without circles */}
+          <motion.div
+            variants={itemVariants}
+            className="flex justify-center gap-6"
+          >
+            {[
+              { icon: Linkedin, href: "https://linkedin.com/in/pritulalahy", label: "LinkedIn" },
+              { icon: Mail, href: "mailto:pritulalahy@gmailcom", label: "Email" }
+            ].map(({ icon: Icon, href, label }) => (
+              <motion.a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1, y: -2 }}
+                whileTap={{ scale: 0.9 }}
+                className="flex items-center justify-center w-12 h-12 bg-white/70 backdrop-blur-sm rounded-xl border border-blue-100 text-slate-600 hover:text-blue-600 hover:bg-white hover:shadow-lg transition-all"
+                aria-label={label}
+              >
+                <Icon size={20} />
+              </motion.a>
+            ))}
           </motion.div>
         </motion.div>
       </div>
 
-      {/* Scroll Indicator */}
+      {/* Scroll indicator */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1, duration: 0.5 }}
+        transition={{ delay: 1.5, duration: 0.5 }}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
       >
         <motion.a
           href="#about"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="flex flex-col items-center text-neutral-600 hover:text-primary-600 transition-colors"
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          className="flex flex-col items-center text-slate-500 hover:text-blue-600 transition-colors group"
         >
-          <span className="text-sm mb-2">Scroll Down</span>
+          <span className="text-sm mb-2 group-hover:text-blue-600 transition-colors">Explore More</span>
           <ChevronDown size={20} />
         </motion.a>
       </motion.div>

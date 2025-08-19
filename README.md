@@ -154,7 +154,7 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 ## 📞 Support
 
 If you need help customizing this portfolio, feel free to reach out:
-- Email: pritul.rahman@example.com
+- Email: pritulalahy@example.com
 - LinkedIn: [Your LinkedIn Profile]
 - GitHub: [Your GitHub Profile]
 

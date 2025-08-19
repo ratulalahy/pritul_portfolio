@@ -58,8 +58,8 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "pritul.rahman@example.com",
-      link: "mailto:pritul.rahman@example.com"
+      value: "pritulalahy@example.com",
+      link: "mailto:pritulalahy@example.com"
     },
     {
       icon: Phone,
@@ -76,12 +76,12 @@ const Contact = () => {
   ]
 
   const socialLinks = [
-    {
-      icon: Github,
-      name: "GitHub",
-      url: "https://github.com",
-      color: "hover:text-neutral-800"
-    },
+    // {
+    //   icon: Github,
+    //   name: "GitHub",
+    //   url: "https://github.com",
+    //   color: "hover:text-neutral-800"
+    // },
     {
       icon: Linkedin,
       name: "LinkedIn",
@@ -97,7 +97,7 @@ const Contact = () => {
   ]
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-20 bg-transparent">
       <div className="container-width section-padding">
         <motion.div
           ref={ref}
@@ -128,8 +128,29 @@ const Contact = () => {
                 </p>
               </div>
 
+              {/* Availability - Moved to better position */}
+              <div className="glass-card rounded-xl p-6">
+                <h4 className="font-semibold text-neutral-900 mb-3">
+                  Current Availability
+                </h4>
+                <div className="space-y-2">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                    <span className="text-neutral-600">Open for internship opportunities</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
+                    <span className="text-neutral-600">Available for research collaborations</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-3 h-3 bg-purple-500 rounded-full animate-pulse"></div>
+                    <span className="text-neutral-600">Seeking full-time opportunities</span>
+                  </div>
+                </div>
+              </div>
+
               {/* Contact Details */}
-              <div className="space-y-6">
+              <div className="space-y-3">
                 {contactInfo.map((info, index) => {
                   const IconComponent = info.icon
                   return (
@@ -137,10 +158,10 @@ const Contact = () => {
                       key={index}
                       href={info.link}
                       whileHover={{ x: 5 }}
-                      className="flex items-center space-x-4 p-4 rounded-lg hover:bg-neutral-50 transition-all duration-300 group"
+                      className="flex items-center space-x-4 p-3 rounded-lg hover:bg-neutral-50 transition-all duration-300 group"
                     >
-                      <div className="w-12 h-12 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                        <IconComponent className="w-6 h-6 text-white" />
+                      <div className="w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <IconComponent className="w-8 h-8 text-blue-500 stroke-1" />
                       </div>
                       <div>
                         <p className="font-semibold text-neutral-900">
@@ -177,27 +198,6 @@ const Contact = () => {
                       </motion.a>
                     )
                   })}
-                </div>
-              </div>
-
-              {/* Availability */}
-              <div className="glass-card rounded-xl p-6">
-                <h4 className="font-semibold text-neutral-900 mb-3">
-                  Current Availability
-                </h4>
-                <div className="space-y-2">
-                  <div className="flex items-center space-x-2">
-                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                    <span className="text-neutral-600">Open for internship opportunities</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
-                    <span className="text-neutral-600">Available for research collaborations</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-3 h-3 bg-purple-500 rounded-full animate-pulse"></div>
-                    <span className="text-neutral-600">Seeking full-time opportunities (2024)</span>
-                  </div>
                 </div>
               </div>
             </motion.div>

@@ -20,17 +20,26 @@ const Navigation = () => {
   }, [])
 
   const navItems = [
-    { name: 'Home', href: '/', anchor: '#home' },
-    { name: 'About', href: '/', anchor: '#about' },
-    { name: 'Education', href: '/', anchor: '#education' },
-    { name: 'Skills', href: '/', anchor: '#skills' },
-    { name: 'Projects', href: '/', anchor: '#projects' },
-    { name: 'Contact', href: '/', anchor: '#contact' },
+    { name: 'Home', href: '#home' },
+    { name: 'About', href: '#about' },
+    { name: 'Education', href: '#education' },
+    { name: 'Skills', href: '#skills' },
+    { name: 'Projects', href: '#projects' },
+    { name: 'Contact', href: '#contact' },
   ]
 
+  const handleNavClick = (href: string) => {
+    if (href.startsWith('#')) {
+      const element = document.querySelector(href)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+    }
+    setIsOpen(false)
+  }
+
   const handleDownloadResume = () => {
-    // This will be implemented later with the PDF export functionality
-    console.log('Download resume clicked')
+    window.open('https://drive.google.com/file/d/1Vlwyl65thQTMKVGzzgJ2m1RxKg-7TawF/view?usp=sharing', '_blank')
   }
 
   return (
@@ -39,7 +48,9 @@ const Navigation = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'glass-card shadow-lg' : 'bg-transparent'
+        scrolled 
+          ? 'bg-white/80 backdrop-blur-md shadow-lg border-b border-slate-200/50' 
+          : 'bg-transparent'
       }`}
     >
       <div className="container-width section-padding">
@@ -48,34 +59,37 @@ const Navigation = () => {
           <Link href="/" className="flex items-center space-x-2">
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="text-2xl font-bold gradient-text"
+              className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent"
             >
-              Toufiq Imroze
+              Taufiq Imroze
             </motion.div>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <Link
+              <button
                 key={item.name}
-                href={item.href}
-                className="text-neutral-700 hover:text-primary-600 transition-colors duration-300 font-medium"
+                onClick={() => handleNavClick(item.href)}
+                className="text-slate-700 hover:text-blue-600 transition-colors duration-300 font-medium relative group"
               >
                 {item.name}
-              </Link>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-indigo-600 group-hover:w-full transition-all duration-300"></span>
+              </button>
             ))}
-            <Link
+            {/* Resume Link Commented Out */}
+            {/* <Link
               href="/resume"
-              className="text-neutral-700 hover:text-primary-600 transition-colors duration-300 font-medium"
+              className="text-slate-700 hover:text-blue-600 transition-colors duration-300 font-medium relative group"
             >
               Resume
-            </Link>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-indigo-600 group-hover:w-full transition-all duration-300"></span>
+            </Link> */}
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={handleDownloadResume}
-              className="btn-primary flex items-center space-x-2"
+              className="inline-flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-all shadow-md hover:shadow-lg"
             >
               <Download size={18} />
               <span>Download CV</span>
@@ -85,7 +99,7 @@ const Navigation = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-neutral-100 transition-colors"
+            className="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors text-slate-700"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -97,34 +111,36 @@ const Navigation = () => {
           animate={{ height: isOpen ? 'auto' : 0 }}
           className="md:hidden overflow-hidden"
         >
-          <div className="py-4 space-y-4">
+          <div className="py-4 space-y-4 bg-white/90 backdrop-blur-md rounded-lg mt-2 border border-slate-200/50">
             {navItems.map((item) => (
-              <Link
+              <button
                 key={item.name}
-                href={item.href}
-                className="block text-neutral-700 hover:text-primary-600 transition-colors duration-300 font-medium"
-                onClick={() => setIsOpen(false)}
+                onClick={() => handleNavClick(item.href)}
+                className="block w-full text-left px-4 py-2 text-slate-700 hover:text-blue-600 hover:bg-slate-50 transition-colors duration-300 font-medium rounded-md"
               >
                 {item.name}
-              </Link>
+              </button>
             ))}
-            <Link
+            {/* Resume Link Commented Out */}
+            {/* <Link
               href="/resume"
-              className="block text-neutral-700 hover:text-primary-600 transition-colors duration-300 font-medium"
+              className="block px-4 py-2 text-slate-700 hover:text-blue-600 hover:bg-slate-50 transition-colors duration-300 font-medium rounded-md"
               onClick={() => setIsOpen(false)}
             >
               Resume
-            </Link>
-            <button
-              onClick={() => {
-                handleDownloadResume()
-                setIsOpen(false)
-              }}
-              className="btn-primary flex items-center space-x-2 w-full justify-center"
-            >
-              <Download size={18} />
-              <span>Download CV</span>
-            </button>
+            </Link> */}
+            <div className="px-4">
+              <button
+                onClick={() => {
+                  handleDownloadResume()
+                  setIsOpen(false)
+                }}
+                className="inline-flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-all shadow-md w-full justify-center"
+              >
+                <Download size={18} />
+                <span>Download CV</span>
+              </button>
+            </div>
           </div>
         </motion.div>
       </div>

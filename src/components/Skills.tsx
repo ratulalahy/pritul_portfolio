@@ -46,7 +46,7 @@ const Skills = () => {
     {
       title: "Textile Engineering",
       icon: Settings,
-      color: "from-primary-500 to-primary-600",
+      color: "from-blue-500 to-indigo-600",
       skills: [
         { name: "Fabric Design & Development", level: 85 },
         { name: "Apparel Manufacturing", level: 90 },
@@ -58,7 +58,7 @@ const Skills = () => {
     {
       title: "Technical Software",
       icon: Monitor,
-      color: "from-secondary-500 to-secondary-600",
+      color: "from-cyan-500 to-blue-600",
       skills: [
         { name: "CAD Software (TexPro)", level: 80 },
         { name: "NedGraphics", level: 75 },
@@ -70,7 +70,7 @@ const Skills = () => {
     {
       title: "Sustainability & Innovation",
       icon: Recycle,
-      color: "from-accent-500 to-accent-600",
+      color: "from-green-500 to-emerald-600",
       skills: [
         { name: "Sustainable Manufacturing", level: 85 },
         { name: "Eco-friendly Materials", level: 80 },
@@ -82,7 +82,7 @@ const Skills = () => {
     {
       title: "Research & Analysis",
       icon: BarChart3,
-      color: "from-purple-500 to-purple-600",
+      color: "from-purple-500 to-indigo-600",
       skills: [
         { name: "Data Analysis", level: 80 },
         { name: "Research Methodology", level: 85 },
@@ -112,7 +112,7 @@ const Skills = () => {
   ]
 
   return (
-    <section id="skills" className="py-20 bg-white">
+    <section id="skills" className="py-20 bg-transparent">
       <div className="container-width section-padding">
         <motion.div
           ref={ref}
@@ -121,12 +121,12 @@ const Skills = () => {
           animate={inView ? "visible" : "hidden"}
         >
           <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-neutral-900 mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-slate-800 via-blue-700 to-indigo-700 bg-clip-text text-transparent mb-4">
               Skills & Expertise
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto mb-6"></div>
-            <p className="text-lg text-neutral-600 max-w-3xl mx-auto">
-              Technical skills and expertise developed through academic studies, practical projects, and industry exposure.
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 mx-auto mb-6"></div>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+              Technical expertise developed through academic excellence and hands-on experience.
             </p>
           </motion.div>
 
@@ -138,13 +138,14 @@ const Skills = () => {
                 <motion.div
                   key={index}
                   variants={itemVariants}
-                  className="glass-card rounded-xl p-8"
+                  whileHover={{ y: -5, scale: 1.02 }}
+                  className="bg-white/30 backdrop-blur-sm border border-slate-200/30 rounded-xl p-8 hover:shadow-lg hover:border-blue-200 transition-all duration-300"
                 >
                   <div className="flex items-center mb-6">
-                    <div className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-lg flex items-center justify-center mr-4`}>
-                      <IconComponent className="w-6 h-6 text-white" />
+                    <div className="w-12 h-12 flex items-center justify-center mr-4">
+                      <IconComponent className="w-8 h-8 text-blue-500 stroke-1" />
                     </div>
-                    <h3 className="text-xl font-bold text-neutral-900">
+                    <h3 className="text-xl font-bold text-slate-800">
                       {category.title}
                     </h3>
                   </div>
@@ -186,8 +187,8 @@ const Skills = () => {
                   whileHover={{ y: -5 }}
                   className="text-center p-6 bg-neutral-50 rounded-xl hover:shadow-lg transition-all duration-300"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <IconComponent className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 flex items-center justify-center mx-auto mb-4">
+                    <IconComponent className="w-8 h-8 text-blue-500 stroke-1" />
                   </div>
                   <h4 className="font-bold text-neutral-900 mb-4">
                     {skillSet.category}
