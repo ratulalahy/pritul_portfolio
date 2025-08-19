@@ -84,7 +84,7 @@ const AdminLogin = ({ onLogin }: AdminLoginProps) => {
         </div>
 
         <div className="mt-6 text-center text-sm text-gray-500">
-          <p>For demo: use password "admin123"</p>
+          <p>For demo: use password &quot;admin123&quot;</p>
         </div>
       </motion.div>
     </div>

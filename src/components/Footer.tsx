@@ -163,8 +163,8 @@ const Footer = () => {
                         transition={{ duration: 1 }}
                         className="text-slate-600 italic text-sm max-w-2xl mx-auto"
                     >
-                        "The future of fashion lies in sustainable innovation and responsible manufacturing.
-                        Every thread we weave today shapes the world we leave tomorrow."
+                        &quot;The future of fashion lies in sustainable innovation and responsible manufacturing.
+                        Every thread we weave today shapes the world we leave tomorrow.&quot;
                     </motion.blockquote>
                     <p className="text-slate-500 text-xs mt-2">- Philosophy on Sustainable Textiles</p>
                 </div>

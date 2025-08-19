@@ -82,7 +82,7 @@ const About = () => {
               </h3>
               
               <p className="text-slate-600 leading-relaxed text-lg">
-                Currently pursuing my Bachelor's degree in Textile Engineering at NITER, 
+                Currently pursuing my Bachelor&apos;s degree in Textile Engineering at NITER, 
                 I am fascinated by the fusion of traditional craftsmanship and cutting-edge technology.
               </p>
 
@@ -92,7 +92,7 @@ const About = () => {
               </p>
 
               <p className="text-slate-600 leading-relaxed">
-                Through academic projects and hands-on experience, I've developed expertise in 
+                Through academic projects and hands-on experience, I&apos;ve developed expertise in 
                 textile manufacturing processes, sustainable production techniques, and quality assurance protocols.
               </p>
 

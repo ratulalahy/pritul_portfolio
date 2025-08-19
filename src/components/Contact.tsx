@@ -111,7 +111,7 @@ const Contact = () => {
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto mb-6"></div>
             <p className="text-lg text-neutral-600 max-w-3xl mx-auto">
-              I'm always open to discussing new opportunities, collaborations, or just having a conversation about textile engineering and sustainable manufacturing.
+              I&apos;m always open to discussing new opportunities, collaborations, or just having a conversation about textile engineering and sustainable manufacturing.
             </p>
           </motion.div>
 
@@ -120,11 +120,11 @@ const Contact = () => {
             <motion.div variants={itemVariants} className="space-y-8">
               <div>
                 <h3 className="text-2xl font-bold text-neutral-900 mb-6">
-                  Let's Connect
+                  Let&apos;s Connect
                 </h3>
                 <p className="text-neutral-600 mb-8">
-                  Whether you're a recruiter looking for fresh talent, a fellow student interested in collaboration, 
-                  or someone passionate about sustainable textiles, I'd love to hear from you.
+                  Whether you&apos;re a recruiter looking for fresh talent, a fellow student interested in collaboration, 
+                  or someone passionate about sustainable textiles, I&apos;d love to hear from you.
                 </p>
               </div>
 

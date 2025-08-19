@@ -221,7 +221,7 @@ const Skills = () => {
                 I am particularly passionate about sustainable textile manufacturing and the integration 
                 of technology in traditional textile processes. My goal is to contribute to the development 
                 of eco-friendly apparel manufacturing systems that reduce environmental impact while 
-                maintaining high quality standards. I'm also interested in exploring smart textiles, 
+                maintaining high quality standards. I&apos;m also interested in exploring smart textiles, 
                 automation in manufacturing, and data-driven quality control systems.
               </p>
               
